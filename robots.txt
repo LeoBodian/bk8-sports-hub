@@ -1,0 +1,11 @@
+# BK8 Sports Hub - Robots.txt
+# https://bk8-sports-hub.pages.dev
+
+User-agent: *
+Allow: /
+
+# Sitemap location
+Sitemap: https://bk8-sports-hub.pages.dev/sitemap.xml
+
+# Crawl-delay suggestion (optional)
+Crawl-delay: 1
