@@ -3,25 +3,40 @@
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <meta name="description" content="Live football betting guide with real-time match analysis. Premier League, Champions League, and Asian leagues live odds and in-play strategies 2025.">
+  <meta name="description" content="Live football betting guide with real-time match analysis. Premier League, Champions League, and Asian leagues live odds and in-play strategies 2026.">
   <meta name="keywords" content="live football betting, in-play football, premier league live odds, champions league betting, real-time football odds">
   <meta name="robots" content="index, follow">
-  <title>Live Football Betting | In-Play Odds & Match Analysis 2025</title>
-  <link rel="stylesheet" href="../css/styles.css">
+  <meta name="theme-color" content="#0a0f1a">
+  <link rel="icon" type="image/svg+xml" href="../favicon.svg">
+  <title>Live Football Betting | In-Play Odds & Match Analysis 2026</title>
+  
+  <!-- Preconnect for fonts -->
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="../css/styles.css?v=3">
 </head>
 <body>
+  <a href="#main-content" class="skip-link">Skip to main content</a>
+
   <header class="header">
     <div class="container">
       <div class="header-inner">
         <a href="../index.html" class="logo">
-          <img src="../images/logo.webp" alt="LiveBK8" class="logo-img">
+          <img src="../images/logo.webp" alt="LiveBK8" class="logo-img" width="36" height="36">
           <span>Live Betting</span>
         </a>
-        <nav class="nav">
+        <button class="nav-toggle" aria-label="Toggle navigation" aria-expanded="false">
+          <span></span>
+          <span></span>
+          <span></span>
+        </button>
+        <nav class="nav" id="main-nav">
           <ul class="nav-list">
             <li><a href="../index.html">Home</a></li>
             <li><a href="live-football.html" class="active">Live Football</a></li>
             <li><a href="live-basketball.html">Live Basketball</a></li>
+            <li><a href="live-esports.html">Live Esports</a></li>
             <li><a href="../guides/in-play-betting.html">In-Play Guide</a></li>
             <li><a href="../streaming/index.html">Live Streaming</a></li>
           </ul>
@@ -30,48 +45,32 @@
     </div>
   </header>
 
-  <main class="main-content">
+  <main id="main-content" class="main-content">
     <div class="container">
-      <div class="breadcrumb">
-        <a href="../index.html">Home</a> &gt; <a href="index.html">Sports</a> &gt; Live Football
-      </div>
+      <!-- Breadcrumb -->
+      <nav class="breadcrumb" aria-label="Breadcrumb">
+        <a href="../index.html">Home</a>
+        <span>›</span>
+        <span>Live Football</span>
+      </nav>
 
-      <h1>⚽ Live Football Betting Guide</h1>
-      <p class="intro">Football offers the most extensive live betting markets. From Premier League to Asian leagues, learn how to profit from in-play football betting.</p>
+      <!-- Page Header -->
+      <div class="page-header">
+        <h1>⚽ Live Football Betting</h1>
+        <p class="intro">Football offers the most extensive live betting markets. From Premier League to Asian leagues, learn how to profit from in-play football betting with real-time analysis.</p>
+      </div>
 
       <section class="live-matches">
         <h2>🔴 Featured Live Matches</h2>
-        <div class="match-grid">
-          <div class="match-card live">
-            <span class="live-badge">LIVE 67'</span>
-            <div class="teams">
-              <span>Manchester United</span>
-              <span class="score">2 - 1</span>
-              <span>Liverpool</span>
-            </div>
-            <div class="odds">
-              <span>Home: 1.85</span>
-              <span>Draw: 3.40</span>
-              <span>Away: 4.20</span>
-            </div>
-          </div>
-          <div class="match-card live">
-            <span class="live-badge">LIVE 34'</span>
-            <div class="teams">
-              <span>Real Madrid</span>
-              <span class="score">0 - 0</span>
-              <span>Barcelona</span>
-            </div>
-            <div class="odds">
-              <span>Home: 2.10</span>
-              <span>Draw: 3.20</span>
-              <span>Away: 3.50</span>
-            </div>
-          </div>
+        <p class="intro" style="margin-bottom: 20px;">Real-time match data powered by API-Football. Odds update automatically.</p>
+        
+        <!-- Dynamic Live Matches Container -->
+        <div id="live-matches-container" class="matches-grid">
+          <!-- Matches loaded dynamically via JavaScript -->
         </div>
       </section>
 
-      <section class="live-markets">
+      <section class="live-markets guide-article">
         <h2>Live Football Betting Markets</h2>
         
         <h3>Match Result Markets</h3>
@@ -172,10 +171,22 @@
       <section class="related">
         <h2>Related Content</h2>
         <div class="related-grid">
-          <a href="live-basketball.html" class="related-card">Live Basketball Betting →</a>
-          <a href="live-esports.html" class="related-card">Live Esports Betting →</a>
-          <a href="../guides/in-play-betting.html" class="related-card">In-Play Betting Guide →</a>
-          <a href="../streaming/index.html" class="related-card">Live Streaming →</a>
+          <a href="live-basketball.html" class="related-card">
+            <h4>Live Basketball Betting</h4>
+            <p>NBA and EuroLeague in-play odds</p>
+          </a>
+          <a href="live-esports.html" class="related-card">
+            <h4>Live Esports Betting</h4>
+            <p>DOTA 2, LoL & CS2 live markets</p>
+          </a>
+          <a href="../guides/in-play-betting.html" class="related-card">
+            <h4>In-Play Betting Guide</h4>
+            <p>Master live betting strategies</p>
+          </a>
+          <a href="../streaming/index.html" class="related-card">
+            <h4>Live Streaming</h4>
+            <p>Watch matches in HD quality</p>
+          </a>
         </div>
       </section>
 
@@ -184,8 +195,40 @@
 
   <footer class="footer">
     <div class="container">
-      <p>&copy; 2025 LiveBK8. All rights reserved. | <a href="../responsible-gambling.html">Responsible Gambling</a></p>
+      <div class="footer-bottom">
+        <p>&copy; 2026 LiveBK8. All rights reserved.</p>
+        <p class="footer-disclaimer">Gambling involves risk. Please gamble responsibly. 18+ only.</p>
+      </div>
     </div>
   </footer>
+
+  <script>
+    // Mobile Navigation
+    const navToggle = document.querySelector('.nav-toggle');
+    const nav = document.getElementById('main-nav');
+    navToggle.addEventListener('click', function() {
+      const isExpanded = this.getAttribute('aria-expanded') === 'true';
+      this.setAttribute('aria-expanded', !isExpanded);
+      nav.classList.toggle('active');
+    });
+
+    // Header scroll effect
+    const header = document.querySelector('.header');
+    window.addEventListener('scroll', () => {
+      if (window.pageYOffset > 50) {
+        header.classList.add('scrolled');
+      } else {
+        header.classList.remove('scrolled');
+      }
+    }, { passive: true });
+  </script>
+
+  <!-- Live Matches API Integration -->
+  <script src="../js/live-matches.js?v=5"></script>
+  <script>
+    document.addEventListener('DOMContentLoaded', function() {
+      LiveMatches.startAutoRefresh('live-matches-container', 6, 180000);
+    });
+  </script>
 </body>
 </html>

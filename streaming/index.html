@@ -3,25 +3,40 @@
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <meta name="description" content="Watch live sports streaming while you bet. Free streams for football, basketball, tennis, and esports. Stream and bet in real-time at BK8 2025.">
+  <meta name="description" content="Watch live sports streaming while you bet. Free streams for football, basketball, tennis, and esports. Stream and bet in real-time at BK8 2026.">
   <meta name="keywords" content="live sports streaming, watch and bet, bk8 live stream, free sports streaming, betting live stream">
   <meta name="robots" content="index, follow">
-  <title>Live Sports Streaming | Watch & Bet in Real-Time 2025</title>
-  <link rel="stylesheet" href="../css/styles.css">
+  <meta name="theme-color" content="#0a0f1a">
+  <link rel="icon" type="image/svg+xml" href="../favicon.svg">
+  <title>Live Sports Streaming | Watch & Bet in Real-Time 2026</title>
+  
+  <!-- Preconnect for fonts -->
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="../css/styles.css?v=3">
 </head>
 <body>
+  <a href="#main-content" class="skip-link">Skip to main content</a>
+
   <header class="header">
     <div class="container">
       <div class="header-inner">
         <a href="../index.html" class="logo">
-          <img src="../images/logo.webp" alt="LiveBK8" class="logo-img">
+          <img src="../images/logo.webp" alt="LiveBK8" class="logo-img" width="36" height="36">
           <span>Live Betting</span>
         </a>
-        <nav class="nav">
+        <button class="nav-toggle" aria-label="Toggle navigation" aria-expanded="false">
+          <span></span>
+          <span></span>
+          <span></span>
+        </button>
+        <nav class="nav" id="main-nav">
           <ul class="nav-list">
             <li><a href="../index.html">Home</a></li>
             <li><a href="../sports/live-football.html">Live Football</a></li>
             <li><a href="../sports/live-basketball.html">Live Basketball</a></li>
+            <li><a href="../sports/live-esports.html">Live Esports</a></li>
             <li><a href="../guides/in-play-betting.html">In-Play Guide</a></li>
             <li><a href="index.html" class="active">Live Streaming</a></li>
           </ul>
@@ -30,31 +45,34 @@
     </div>
   </header>
 
-  <main class="main-content">
+  <main id="main-content" class="guide-article">
     <div class="container">
-      <div class="breadcrumb">
-        <a href="../index.html">Home</a> &gt; Live Streaming
-      </div>
+      <!-- Breadcrumb -->
+      <nav class="breadcrumb" aria-label="Breadcrumb">
+        <a href="../index.html">Home</a>
+        <span>›</span>
+        <span>Live Streaming</span>
+      </nav>
 
-      <h1>📺 Live Sports Streaming Guide</h1>
+      <h1>📺 Live Sports Streaming</h1>
       <p class="intro">Watch live sports while you bet! Live streaming lets you see the action in real-time, making better in-play betting decisions.</p>
 
       <section class="benefits">
         <h2>Why Stream & Bet?</h2>
-        <div class="benefit-grid">
-          <div class="benefit-card">
+        <div class="sports-grid">
+          <div class="sport-card">
             <h3>👁️ See the Action</h3>
             <p>Watch momentum shifts before odds adjust. Spot opportunities others miss.</p>
           </div>
-          <div class="benefit-card">
+          <div class="sport-card">
             <h3>⚡ React Faster</h3>
             <p>Make quicker decisions when you see goals, injuries, or red cards live.</p>
           </div>
-          <div class="benefit-card">
+          <div class="sport-card">
             <h3>🎯 Better Analysis</h3>
             <p>Visual information beats statistics alone. See which team is pressing.</p>
           </div>
-          <div class="benefit-card">
+          <div class="sport-card">
             <h3>🆓 Free Access</h3>
             <p>Streams are free for account holders. No extra subscription needed.</p>
           </div>
@@ -156,10 +174,22 @@
       <section class="related">
         <h2>Related Content</h2>
         <div class="related-grid">
-          <a href="../guides/in-play-betting.html" class="related-card">In-Play Betting Guide →</a>
-          <a href="../sports/live-football.html" class="related-card">Live Football →</a>
-          <a href="../sports/live-basketball.html" class="related-card">Live Basketball →</a>
-          <a href="../sports/live-esports.html" class="related-card">Live Esports →</a>
+          <a href="../guides/in-play-betting.html" class="related-card">
+            <h4>In-Play Betting Guide</h4>
+            <p>Master live betting strategies</p>
+          </a>
+          <a href="../sports/live-football.html" class="related-card">
+            <h4>Live Football</h4>
+            <p>Watch Premier League and more</p>
+          </a>
+          <a href="../sports/live-basketball.html" class="related-card">
+            <h4>Live Basketball</h4>
+            <p>NBA and EuroLeague streams</p>
+          </a>
+          <a href="../sports/live-esports.html" class="related-card">
+            <h4>Live Esports</h4>
+            <p>DOTA 2, LoL & CS2 action</p>
+          </a>
         </div>
       </section>
 
@@ -168,8 +198,32 @@
 
   <footer class="footer">
     <div class="container">
-      <p>&copy; 2025 LiveBK8. All rights reserved. | <a href="../responsible-gambling.html">Responsible Gambling</a></p>
+      <div class="footer-bottom">
+        <p>&copy; 2026 LiveBK8. All rights reserved.</p>
+        <p class="footer-disclaimer">Gambling involves risk. Please gamble responsibly. 18+ only.</p>
+      </div>
     </div>
   </footer>
+
+  <script>
+    // Mobile Navigation
+    const navToggle = document.querySelector('.nav-toggle');
+    const nav = document.getElementById('main-nav');
+    navToggle.addEventListener('click', function() {
+      const isExpanded = this.getAttribute('aria-expanded') === 'true';
+      this.setAttribute('aria-expanded', !isExpanded);
+      nav.classList.toggle('active');
+    });
+
+    // Header scroll effect
+    const header = document.querySelector('.header');
+    window.addEventListener('scroll', () => {
+      if (window.pageYOffset > 50) {
+        header.classList.add('scrolled');
+      } else {
+        header.classList.remove('scrolled');
+      }
+    }, { passive: true });
+  </script>
 </body>
 </html>

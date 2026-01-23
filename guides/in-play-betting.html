@@ -3,25 +3,40 @@
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <meta name="description" content="Master in-play betting with our complete guide. Learn live betting strategies, when to bet, cash out tips, and real-time odds analysis for BK8 2025.">
+  <meta name="description" content="Master in-play betting with our complete guide. Learn live betting strategies, when to bet, cash out tips, and real-time odds analysis for BK8 2026.">
   <meta name="keywords" content="in-play betting guide, live betting strategy, bk8 live betting, real-time odds, cash out betting, live wagering tips">
   <meta name="robots" content="index, follow">
-  <title>In-Play Betting Guide | Live Betting Strategies & Tips 2025</title>
-  <link rel="stylesheet" href="../css/styles.css">
+  <meta name="theme-color" content="#0a0f1a">
+  <link rel="icon" type="image/svg+xml" href="../favicon.svg">
+  <title>In-Play Betting Guide | Live Betting Strategies & Tips 2026</title>
+  
+  <!-- Preconnect for fonts -->
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="../css/styles.css?v=3">
 </head>
 <body>
+  <a href="#main-content" class="skip-link">Skip to main content</a>
+
   <header class="header">
     <div class="container">
       <div class="header-inner">
         <a href="../index.html" class="logo">
-          <img src="../images/logo.webp" alt="LiveBK8" class="logo-img">
+          <img src="../images/logo.webp" alt="LiveBK8" class="logo-img" width="36" height="36">
           <span>Live Betting</span>
         </a>
-        <nav class="nav">
+        <button class="nav-toggle" aria-label="Toggle navigation" aria-expanded="false">
+          <span></span>
+          <span></span>
+          <span></span>
+        </button>
+        <nav class="nav" id="main-nav">
           <ul class="nav-list">
             <li><a href="../index.html">Home</a></li>
             <li><a href="../sports/live-football.html">Live Football</a></li>
             <li><a href="../sports/live-basketball.html">Live Basketball</a></li>
+            <li><a href="../sports/live-esports.html">Live Esports</a></li>
             <li><a href="in-play-betting.html" class="active">In-Play Guide</a></li>
             <li><a href="../streaming/index.html">Live Streaming</a></li>
           </ul>
@@ -30,27 +45,31 @@
     </div>
   </header>
 
-  <main class="main-content">
-    <article class="guide-article">
-      <div class="container">
-        <div class="breadcrumb">
-          <a href="../index.html">Home</a> &gt; <a href="index.html">Guides</a> &gt; In-Play Betting
-        </div>
+  <main id="main-content" class="guide-article">
+    <div class="container">
+      <!-- Breadcrumb -->
+      <nav class="breadcrumb" aria-label="Breadcrumb">
+        <a href="../index.html">Home</a>
+        <span>›</span>
+        <a href="index.html">Guides</a>
+        <span>›</span>
+        <span>In-Play Betting</span>
+      </nav>
 
-        <h1>🔴 Complete In-Play Betting Guide 2025</h1>
-        <p class="intro">In-play betting (also called live betting) lets you place wagers while a match is in progress. This guide covers everything you need to know about real-time sports betting.</p>
+      <h1>🔴 Complete In-Play Betting Guide 2026</h1>
+      <p class="intro">In-play betting (also called live betting) lets you place wagers while a match is in progress. This guide covers everything you need to know about real-time sports betting.</p>
 
-        <div class="toc">
-          <h3>Table of Contents</h3>
-          <ul>
-            <li><a href="#what-is">What is In-Play Betting?</a></li>
-            <li><a href="#advantages">Advantages of Live Betting</a></li>
-            <li><a href="#strategies">Winning Strategies</a></li>
-            <li><a href="#sports">Best Sports for Live Betting</a></li>
-            <li><a href="#cashout">Cash Out Feature</a></li>
-            <li><a href="#tips">Pro Tips</a></li>
-          </ul>
-        </div>
+      <div class="toc">
+        <h3>📑 Table of Contents</h3>
+        <ul>
+          <li><a href="#what-is">What is In-Play Betting?</a></li>
+          <li><a href="#advantages">Advantages of Live Betting</a></li>
+          <li><a href="#strategies">Winning Strategies</a></li>
+          <li><a href="#sports">Best Sports for Live Betting</a></li>
+          <li><a href="#cashout">Cash Out Feature</a></li>
+          <li><a href="#tips">Pro Tips</a></li>
+        </ul>
+      </div>
 
         <section id="what-is">
           <h2>What is In-Play Betting?</h2>
@@ -180,13 +199,36 @@
         </section>
 
       </div>
-    </article>
   </main>
 
   <footer class="footer">
     <div class="container">
-      <p>&copy; 2025 LiveBK8. All rights reserved. | <a href="../responsible-gambling.html">Responsible Gambling</a></p>
+      <div class="footer-bottom">
+        <p>&copy; 2026 LiveBK8. All rights reserved.</p>
+        <p class="footer-disclaimer">Gambling involves risk. Please gamble responsibly. 18+ only.</p>
+      </div>
     </div>
   </footer>
+
+  <script>
+    // Mobile Navigation
+    const navToggle = document.querySelector('.nav-toggle');
+    const nav = document.getElementById('main-nav');
+    navToggle.addEventListener('click', function() {
+      const isExpanded = this.getAttribute('aria-expanded') === 'true';
+      this.setAttribute('aria-expanded', !isExpanded);
+      nav.classList.toggle('active');
+    });
+
+    // Header scroll effect
+    const header = document.querySelector('.header');
+    window.addEventListener('scroll', () => {
+      if (window.pageYOffset > 50) {
+        header.classList.add('scrolled');
+      } else {
+        header.classList.remove('scrolled');
+      }
+    }, { passive: true });
+  </script>
 </body>
 </html>

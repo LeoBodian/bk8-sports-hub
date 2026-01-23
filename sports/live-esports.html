@@ -3,26 +3,41 @@
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <meta name="description" content="Live esports betting guide for Dota 2, CS2, League of Legends, and Valorant. Real-time odds, map betting, and in-play esports strategies 2025.">
+  <meta name="description" content="Live esports betting guide for Dota 2, CS2, League of Legends, and Valorant. Real-time odds, map betting, and in-play esports strategies 2026.">
   <meta name="keywords" content="live esports betting, dota 2 live odds, cs2 betting, league of legends in-play, valorant betting live">
   <meta name="robots" content="index, follow">
-  <title>Live Esports Betting | Dota 2, CS2 & LoL In-Play Odds 2025</title>
-  <link rel="stylesheet" href="../css/styles.css">
+  <meta name="theme-color" content="#0a0f1a">
+  <link rel="icon" type="image/svg+xml" href="../favicon.svg">
+  <title>Live Esports Betting | Dota 2, CS2 & LoL In-Play Odds 2026</title>
+  
+  <!-- Preconnect for fonts -->
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="../css/styles.css?v=3">
 </head>
 <body>
+  <a href="#main-content" class="skip-link">Skip to main content</a>
+
   <header class="header">
     <div class="container">
       <div class="header-inner">
         <a href="../index.html" class="logo">
-          <img src="../images/logo.webp" alt="LiveBK8" class="logo-img">
+          <img src="../images/logo.webp" alt="LiveBK8" class="logo-img" width="36" height="36">
           <span>Live Betting</span>
         </a>
-        <nav class="nav">
+        <button class="nav-toggle" aria-label="Toggle navigation" aria-expanded="false">
+          <span></span>
+          <span></span>
+          <span></span>
+        </button>
+        <nav class="nav" id="main-nav">
           <ul class="nav-list">
             <li><a href="../index.html">Home</a></li>
             <li><a href="live-football.html">Live Football</a></li>
             <li><a href="live-basketball.html">Live Basketball</a></li>
             <li><a href="live-esports.html" class="active">Live Esports</a></li>
+            <li><a href="../guides/in-play-betting.html">In-Play Guide</a></li>
             <li><a href="../streaming/index.html">Live Streaming</a></li>
           </ul>
         </nav>
@@ -30,48 +45,22 @@
     </div>
   </header>
 
-  <main class="main-content">
+  <main id="main-content" class="main-content">
     <div class="container">
-      <div class="breadcrumb">
-        <a href="../index.html">Home</a> &gt; <a href="index.html">Sports</a> &gt; Live Esports
+      <!-- Breadcrumb -->
+      <nav class="breadcrumb" aria-label="Breadcrumb">
+        <a href="../index.html">Home</a>
+        <span>›</span>
+        <span>Live Esports</span>
+      </nav>
+
+      <!-- Page Header -->
+      <div class="page-header">
+        <h1>🎮 Live Esports Betting</h1>
+        <p class="intro">Esports is the fastest-growing betting market. With matches streamed 24/7 and unique in-game markets, live esports betting offers unmatched action.</p>
       </div>
 
-      <h1>🎮 Live Esports Betting Guide</h1>
-      <p class="intro">Esports is the fastest-growing betting market. With matches streamed 24/7 and unique in-game markets, live esports betting offers unmatched action.</p>
-
-      <section class="live-matches">
-        <h2>🔴 Live Esports Matches</h2>
-        <div class="match-grid">
-          <div class="match-card live esports">
-            <span class="live-badge">LIVE Map 2</span>
-            <span class="game-badge">CS2</span>
-            <div class="teams">
-              <span>Navi</span>
-              <span class="score">1 - 0</span>
-              <span>FaZe</span>
-            </div>
-            <div class="odds">
-              <span>Navi: 1.55</span>
-              <span>FaZe: 2.45</span>
-            </div>
-          </div>
-          <div class="match-card live esports">
-            <span class="live-badge">LIVE 32min</span>
-            <span class="game-badge">Dota 2</span>
-            <div class="teams">
-              <span>Team Spirit</span>
-              <span class="score">12k gold lead</span>
-              <span>Team Liquid</span>
-            </div>
-            <div class="odds">
-              <span>Spirit: 1.25</span>
-              <span>Liquid: 4.00</span>
-            </div>
-          </div>
-        </div>
-      </section>
-
-      <section class="games">
+      <section class="games guide-article">
         <h2>Popular Esports for Live Betting</h2>
         
         <div class="game-section">
@@ -101,107 +90,158 @@
         </div>
 
         <div class="game-section">
-          <h3>🏆 League of Legends (LoL)</h3>
-          <p>World's biggest esport. Structured gameplay with clear objective-based betting.</p>
+          <h3>🏆 League of Legends</h3>
+          <p>World's most-watched esport. Structured gameplay with clear win conditions.</p>
           <h4>Live Markets:</h4>
           <ul>
             <li>Map winner</li>
-            <li>First dragon</li>
-            <li>First Baron</li>
+            <li>First dragon/baron</li>
             <li>First tower</li>
             <li>Total kills</li>
+            <li>Game duration over/under</li>
           </ul>
         </div>
 
         <div class="game-section">
-          <h3>🎯 Valorant</h3>
-          <p>Tactical shooter growing rapidly. Similar to CS2 with agent abilities.</p>
+          <h3>💥 Valorant</h3>
+          <p>Rising tactical shooter combining CS mechanics with hero abilities.</p>
           <h4>Live Markets:</h4>
           <ul>
             <li>Map winner</li>
             <li>Round winner</li>
             <li>Total rounds</li>
-            <li>First blood</li>
+            <li>First to X rounds</li>
+            <li>Overtime yes/no</li>
           </ul>
         </div>
       </section>
 
-      <section class="strategies">
+      <section class="strategies guide-article">
         <h2>Live Esports Betting Strategies</h2>
 
         <div class="strategy-card">
-          <h3>🎯 CS2: Economy Tracking</h3>
-          <p>Watch team economies. A team on an eco round (low money) is unlikely to win. Back the team with full buy.</p>
+          <h3>🎯 Strategy 1: Watch the Economy (CS2)</h3>
+          <p>Track team economy. A full-buy vs eco round has predictable outcomes. Bet on the team with better weapons.</p>
         </div>
 
         <div class="strategy-card">
-          <h3>🎯 Dota 2: High Ground Defense</h3>
-          <p>Teams defending high ground often win fights even when behind. Don't count out teams with late-game heroes.</p>
+          <h3>🎯 Strategy 2: Momentum After Pistol Rounds</h3>
+          <p>Pistol round winners usually win the next 2-3 rounds. Back them early in each half.</p>
         </div>
 
         <div class="strategy-card">
-          <h3>🎯 LoL: Dragon Soul Setup</h3>
-          <p>Teams with 3 dragons will fight hard for Soul. Expect action around dragon spawns - good for kill markets.</p>
+          <h3>🎯 Strategy 3: Late Game Scaling (MOBAs)</h3>
+          <p>Some Dota 2/LoL teams have better late-game compositions. Back them if they survive early.</p>
         </div>
 
         <div class="strategy-card">
-          <h3>🎯 General: Map Pick Advantage</h3>
-          <p>Teams perform better on their map picks. Check the veto and back teams on their chosen maps.</p>
+          <h3>🎯 Strategy 4: Map Advantage</h3>
+          <p>Teams have map preferences. Check historical performance on specific maps before betting.</p>
         </div>
       </section>
 
-      <section class="tournaments">
+      <section class="tournaments guide-article">
         <h2>Major Esports Tournaments</h2>
-        <div class="tournament-grid">
-          <div class="tournament-card">
-            <h4>The International (Dota 2)</h4>
-            <p>$30M+ prize pool, August</p>
+        <div class="sports-grid">
+          <div class="sport-card">
+            <h3>🏆 The International</h3>
+            <p>Dota 2's biggest event with $30M+ prize pools</p>
           </div>
-          <div class="tournament-card">
-            <h4>CS2 Major Championships</h4>
-            <p>Two per year, highest prestige</p>
+          <div class="sport-card">
+            <h3>🌍 CS2 Majors</h3>
+            <p>Two majors per year - the pinnacle of CS</p>
           </div>
-          <div class="tournament-card">
-            <h4>LoL World Championship</h4>
-            <p>October-November, global event</p>
+          <div class="sport-card">
+            <h3>🏅 LoL Worlds</h3>
+            <p>League of Legends World Championship</p>
           </div>
-          <div class="tournament-card">
-            <h4>Valorant Champions</h4>
-            <p>Year-end championship</p>
+          <div class="sport-card">
+            <h3>⚡ VCT Champions</h3>
+            <p>Valorant Champions Tour finals</p>
           </div>
         </div>
       </section>
 
-      <section class="tips">
-        <h2>Pro Tips for Esports Live Betting</h2>
+      <section class="tips guide-article">
+        <h2>Pro Tips for Esports Betting</h2>
         <ol>
-          <li><strong>Watch the stream</strong> - Esports is always streamed free on Twitch/YouTube</li>
-          <li><strong>Know the meta</strong> - Patch changes affect team strengths</li>
-          <li><strong>Check head-to-head</strong> - Some teams always beat others</li>
-          <li><strong>Map pool matters</strong> - Teams have signature maps</li>
-          <li><strong>Player form</strong> - Star players can carry games</li>
+          <li><strong>Always watch the stream</strong> - Esports is 100% streamable</li>
+          <li><strong>Know the patch</strong> - Game updates change the meta</li>
+          <li><strong>Track roster changes</strong> - New players = unpredictable results</li>
+          <li><strong>Consider time zones</strong> - Teams playing at odd hours underperform</li>
+          <li><strong>Specialize in one game</strong> - Deep knowledge beats broad coverage</li>
         </ol>
-
-        <p>Check out our <a href="../streaming/index.html">live streaming guide</a> to watch esports while you bet.</p>
       </section>
 
-      <section class="related">
+      <section class="related guide-article">
         <h2>Related Content</h2>
-        <div class="related-grid">
-          <a href="live-football.html" class="related-card">Live Football Betting →</a>
-          <a href="live-basketball.html" class="related-card">Live Basketball Betting →</a>
-          <a href="../guides/in-play-betting.html" class="related-card">In-Play Betting Guide →</a>
-          <a href="../streaming/index.html" class="related-card">Live Streaming →</a>
+        <div class="sports-grid">
+          <a href="live-football.html" class="sport-card">
+            <h3>⚽ Live Football</h3>
+            <p>Premier League, Champions League & more →</p>
+          </a>
+          <a href="live-basketball.html" class="sport-card">
+            <h3>🏀 Live Basketball</h3>
+            <p>NBA, EuroLeague & Asian leagues →</p>
+          </a>
+          <a href="../guides/in-play-betting.html" class="sport-card">
+            <h3>📖 In-Play Guide</h3>
+            <p>Complete live betting strategies →</p>
+          </a>
+          <a href="../streaming/index.html" class="sport-card">
+            <h3>📺 Live Streaming</h3>
+            <p>Watch and bet in real-time →</p>
+          </a>
         </div>
       </section>
 
     </div>
   </main>
 
+  <!-- Footer -->
   <footer class="footer">
     <div class="container">
-      <p>&copy; 2025 LiveBK8. All rights reserved. | <a href="../responsible-gambling.html">Responsible Gambling</a></p>
+      <div class="footer-grid">
+        <div class="footer-brand">
+          <a href="../index.html" class="logo">
+            <img src="../images/logo.webp" alt="LiveBK8" class="logo-img" width="36" height="36">
+            <span>Live Betting</span>
+          </a>
+          <p>Your trusted source for real-time sports betting analysis, live odds, and HD streaming.</p>
+        </div>
+        <div class="footer-section">
+          <h4>Sports</h4>
+          <ul>
+            <li><a href="live-football.html">Live Football</a></li>
+            <li><a href="live-basketball.html">Live Basketball</a></li>
+            <li><a href="live-esports.html">Live Esports</a></li>
+          </ul>
+        </div>
+        <div class="footer-section">
+          <h4>Resources</h4>
+          <ul>
+            <li><a href="../guides/in-play-betting.html">In-Play Guide</a></li>
+            <li><a href="../streaming/index.html">Live Streaming</a></li>
+            <li><a href="../responsible-gambling.html">Responsible Gambling</a></li>
+          </ul>
+        </div>
+      </div>
+      <div class="footer-bottom">
+        <p>&copy; 2026 LiveBK8. All rights reserved. | <a href="../responsible-gambling.html">Gamble Responsibly</a></p>
+      </div>
     </div>
   </footer>
+
+  <!-- Mobile Navigation Script -->
+  <script>
+    const navToggle = document.querySelector('.nav-toggle');
+    const nav = document.querySelector('.nav');
+    
+    navToggle?.addEventListener('click', () => {
+      const isExpanded = navToggle.getAttribute('aria-expanded') === 'true';
+      navToggle.setAttribute('aria-expanded', !isExpanded);
+      nav.classList.toggle('nav-open');
+    });
+  </script>
 </body>
 </html>
