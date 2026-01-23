@@ -747,6 +747,105 @@ const LiveMatches = {
   },
 
   /**
+   * Split view: Separate Live and Upcoming sections
+   */
+  async initSplitView(liveContainerId, upcomingContainerId, limit = 4) {
+    const liveContainer = document.getElementById(liveContainerId);
+    const upcomingContainer = document.getElementById(upcomingContainerId);
+    
+    if (!liveContainer || !upcomingContainer) {
+      console.error('Split view containers not found');
+      return;
+    }
+
+    // Show loading skeletons
+    liveContainer.innerHTML = this.renderSkeleton(limit);
+    upcomingContainer.innerHTML = this.renderSkeleton(limit);
+
+    try {
+      const matches = await this.fetchMatches();
+
+      // Separate live and upcoming matches
+      const liveMatches = matches.filter(m => this.isLive(m));
+      const upcomingMatches = matches.filter(m => {
+        const isUpcoming = ['TIMED', 'SCHEDULED', 'NS'].includes(m.status);
+        return isUpcoming && !this.isLive(m);
+      }).sort((a, b) => new Date(a.utcDate) - new Date(b.utcDate));
+
+      // Fetch odds for matches that will be displayed
+      const matchesToShow = [...liveMatches.slice(0, limit), ...upcomingMatches.slice(0, limit)];
+      const oddsMap = await this.fetchOddsForMatches(matchesToShow);
+
+      // Render Live Matches
+      if (liveMatches.length > 0) {
+        liveContainer.innerHTML = liveMatches.slice(0, limit)
+          .map(match => this.renderMatchCard(match, oddsMap.get(match.id)))
+          .join('');
+      } else {
+        liveContainer.innerHTML = `
+          <div class="no-matches-message">
+            <span class="no-matches-icon">⚽</span>
+            <p>No live matches right now</p>
+            <small>Check back soon or browse upcoming matches below</small>
+          </div>
+        `;
+      }
+
+      // Render Upcoming Matches
+      if (upcomingMatches.length > 0) {
+        upcomingContainer.innerHTML = upcomingMatches.slice(0, limit)
+          .map(match => this.renderMatchCard(match, oddsMap.get(match.id)))
+          .join('');
+      } else {
+        // Use fallback matches if no upcoming from API
+        const fallback = this.getFallbackMatches();
+        upcomingContainer.innerHTML = fallback.slice(0, limit)
+          .map(match => this.renderMatchCard(match))
+          .join('');
+      }
+
+    } catch (error) {
+      console.error('Split view initialization failed:', error);
+      // Show fallback data
+      const fallback = this.getFallbackMatches();
+      liveContainer.innerHTML = `
+        <div class="no-matches-message">
+          <span class="no-matches-icon">⚽</span>
+          <p>No live matches right now</p>
+        </div>
+      `;
+      upcomingContainer.innerHTML = fallback.slice(0, limit)
+        .map(match => this.renderMatchCard(match))
+        .join('');
+    }
+  },
+
+  /**
+   * Start split view with auto-refresh
+   */
+  startSplitView(liveContainerId, upcomingContainerId, limit = 4, intervalMs = 180000) {
+    // Initialize visibility tracking
+    this.initVisibilityTracking();
+    
+    // Initial load
+    this.initSplitView(liveContainerId, upcomingContainerId, limit);
+
+    // Set up interval
+    setInterval(() => {
+      if (this.isPageVisible) {
+        console.log('Auto-refresh: Page visible, refreshing split view...');
+        this.cache.matches = null;
+        this.cache.matchesTimestamp = null;
+        this.initSplitView(liveContainerId, upcomingContainerId, limit);
+      } else {
+        console.log('Auto-refresh: Page hidden, skipping to save API calls');
+      }
+    }, intervalMs);
+
+    console.log(`Split view auto-refresh initialized: every ${intervalMs/1000}s when visible`);
+  },
+
+  /**
    * Force refresh (bypasses cache)
    */
   async forceRefresh(containerId = 'live-matches-container', limit = 4) {

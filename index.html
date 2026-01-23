@@ -6,7 +6,7 @@
   <meta name="description" content="BK8 live betting hub - Real-time sports odds, in-play wagering, and live streaming. Bet on football, basketball & esports with live odds updates 2026.">
   <meta name="keywords" content="bk8 live betting, live sports odds, in-play betting, live streaming bk8, real-time odds, live bet bk8">
   <meta name="robots" content="index, follow">
-  <meta name="theme-color" content="#0a0f1a">
+  <meta name="theme-color" content="#0a1628">
   <link rel="icon" type="image/svg+xml" href="favicon.svg">
   <link rel="canonical" href="https://bk8-sports-hub.pages.dev/">
   <link rel="sitemap" type="application/xml" href="/sitemap.xml">
@@ -16,7 +16,7 @@
   <!-- Preload Critical Resources -->
   <link rel="preconnect" href="https://fonts.googleapis.com">
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-  <link rel="preload" href="css/styles.css?v=3" as="style">
+  <link rel="preload" href="css/styles.css?v=7" as="style">
   
   <!-- Google Fonts - Inter -->
   <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800&display=swap" rel="stylesheet">
@@ -39,7 +39,7 @@
   </style>
   
   <!-- Main Stylesheet -->
-  <link rel="stylesheet" href="css/styles.css?v=3">
+  <link rel="stylesheet" href="css/styles.css?v=7">
   
   <!-- Schema.org Markup -->
   <script type="application/ld+json">
@@ -116,11 +116,11 @@
   <!-- Main Content -->
   <main id="main-content">
     
-    <!-- Featured Matches Section -->
+    <!-- Live Matches Section -->
     <section class="section">
       <div class="container">
         <div class="section-header">
-          <h2 class="section-title">Live Matches Now</h2>
+          <h2 class="section-title">🔴 Live Now</h2>
           <span class="live-indicator">
             <span class="live-dot"></span>
             Auto-updating
@@ -129,7 +129,22 @@
         
         <!-- Dynamic Live Matches Container -->
         <div id="live-matches-container" class="matches-grid">
-          <!-- Matches loaded dynamically via JavaScript -->
+          <!-- Live matches loaded dynamically via JavaScript -->
+        </div>
+      </div>
+    </section>
+
+    <!-- Upcoming Matches Section -->
+    <section class="section section-alt">
+      <div class="container">
+        <div class="section-header">
+          <h2 class="section-title">📅 Upcoming Matches</h2>
+          <a href="sports/live-football.html" class="section-link">View Full Schedule →</a>
+        </div>
+        
+        <!-- Dynamic Upcoming Matches Container -->
+        <div id="upcoming-matches-container" class="matches-grid">
+          <!-- Upcoming matches loaded dynamically via JavaScript -->
         </div>
       </div>
     </section>
@@ -146,7 +161,7 @@
           <!-- Article Card 1 -->
           <article class="card">
             <img class="card-img" 
-                 src="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 400 160'%3E%3Crect fill='%231a2d4a' width='400' height='160'/%3E%3Ctext x='50%25' y='50%25' fill='%2300f5a0' text-anchor='middle' dy='.3em' font-size='18'%3E⚽ Premier League%3C/text%3E%3C/svg%3E"
+                 src="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 400 160'%3E%3Crect fill='%23132240' width='400' height='160'/%3E%3Ctext x='50%25' y='50%25' fill='%233B82F6' text-anchor='middle' dy='.3em' font-size='18'%3E⚽ Premier League%3C/text%3E%3C/svg%3E"
                  alt="Manchester United vs Liverpool Premier League Match Preview"
                  loading="lazy"
                  width="400"
@@ -163,7 +178,7 @@
           <!-- Article Card 2 -->
           <article class="card">
             <img class="card-img" 
-                 src="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 400 160'%3E%3Crect fill='%231a2d4a' width='400' height='160'/%3E%3Ctext x='50%25' y='50%25' fill='%2300f5a0' text-anchor='middle' dy='.3em' font-size='18'%3E⚽ La Liga%3C/text%3E%3C/svg%3E"
+                 src="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 400 160'%3E%3Crect fill='%23132240' width='400' height='160'/%3E%3Ctext x='50%25' y='50%25' fill='%233B82F6' text-anchor='middle' dy='.3em' font-size='18'%3E⚽ La Liga%3C/text%3E%3C/svg%3E"
                  alt="El Clasico Real Madrid vs Barcelona La Liga betting tips"
                  loading="lazy"
                  width="400"
@@ -180,7 +195,7 @@
           <!-- Article Card 3 -->
           <article class="card">
             <img class="card-img" 
-                 src="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 400 160'%3E%3Crect fill='%231a2d4a' width='400' height='160'/%3E%3Ctext x='50%25' y='50%25' fill='%2300f5a0' text-anchor='middle' dy='.3em' font-size='18'%3E🏀 NBA%3C/text%3E%3C/svg%3E"
+                 src="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 400 160'%3E%3Crect fill='%23132240' width='400' height='160'/%3E%3Ctext x='50%25' y='50%25' fill='%233B82F6' text-anchor='middle' dy='.3em' font-size='18'%3E🏀 NBA%3C/text%3E%3C/svg%3E"
                  alt="Lakers vs Celtics NBA betting odds analysis"
                  loading="lazy"
                  width="400"
@@ -428,12 +443,12 @@
   </script>
 
   <!-- Live Matches API Integration -->
-  <script src="js/live-matches.js?v=5"></script>
+  <script src="js/live-matches.js?v=6"></script>
   <script>
-    // Initialize live matches with auto-refresh every 3 minutes (180000ms)
+    // Initialize live and upcoming matches with auto-refresh every 3 minutes
     // Only refreshes when page is visible to save API calls
     document.addEventListener('DOMContentLoaded', function() {
-      LiveMatches.startAutoRefresh('live-matches-container', 4, 180000);
+      LiveMatches.startSplitView('live-matches-container', 'upcoming-matches-container', 4, 180000);
     });
   </script>
 </body>

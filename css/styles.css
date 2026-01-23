@@ -2,38 +2,47 @@
 /* Performance Optimized | Glassmorphism | Smooth Animations */
 
 :root {
-  /* Modern Dark Theme */
-  --primary: #0a0f1a;
-  --primary-dark: #050810;
-  --primary-light: #141c2f;
-  --surface: rgba(20, 28, 47, 0.8);
-  --surface-glass: rgba(20, 28, 47, 0.6);
+  /* BK8 Deep Navy Blue Theme */
+  --primary: #0a1628;
+  --primary-dark: #060e1a;
+  --primary-light: #132240;
+  --surface: rgba(19, 34, 64, 0.9);
+  --surface-glass: rgba(10, 22, 40, 0.85);
   
-  /* Vibrant Accent Colors */
-  --accent: #00f5a0;
-  --accent-secondary: #00d9f5;
-  --accent-glow: rgba(0, 245, 160, 0.3);
-  --gradient-accent: linear-gradient(135deg, #00f5a0 0%, #00d9f5 100%);
+  /* BK8 Blue Accent (Primary) */
+  --accent: #3B82F6;
+  --accent-hover: #60a5fa;
+  --accent-glow: rgba(59, 130, 246, 0.3);
+  --gradient-accent: linear-gradient(135deg, #3B82F6 0%, #60a5fa 100%);
+  
+  /* BK8 Blue Accent (Secondary/Links) */
+  --accent-blue: #3B82F6;
+  --accent-blue-hover: #60a5fa;
   
   /* Text Colors */
   --text: #ffffff;
-  --text-light: #8892a6;
-  --text-muted: #8892a6;
-  --text-subtle: #5a6477;
+  --text-primary: #ffffff;
+  --text-light: #94a3b8;
+  --text-muted: #64748b;
+  --text-subtle: #475569;
   --white: #ffffff;
   
   /* Effects */
-  --bg: #0a0f1a;
-  --bg-card: rgba(20, 28, 47, 0.8);
+  --bg: #0a1628;
+  --bg-card: rgba(19, 34, 64, 0.95);
   --border: rgba(255, 255, 255, 0.08);
-  --border-hover: rgba(0, 245, 160, 0.4);
-  --shadow: 0 2px 8px rgba(0, 0, 0, 0.3);
-  --shadow-md: 0 8px 32px rgba(0, 0, 0, 0.4);
-  --shadow-glow: 0 0 40px rgba(0, 245, 160, 0.15);
+  --border-hover: rgba(59, 130, 246, 0.5);
+  --shadow: 0 2px 8px rgba(0, 0, 0, 0.5);
+  --shadow-md: 0 8px 32px rgba(0, 0, 0, 0.6);
+  --shadow-glow: 0 0 40px rgba(59, 130, 246, 0.2);
   --blur: blur(20px);
   
+  /* Glassmorphism for cards */
+  --glass-bg: rgba(19, 34, 64, 0.8);
+  --glass-border: rgba(255, 255, 255, 0.06);
+  
   /* Live indicator */
-  --live-pulse: #ff3b5c;
+  --live-pulse: #ef4444;
   
   /* Timing */
   --transition-fast: 0.15s ease;
@@ -98,7 +107,7 @@ body::before {
 }
 
 .header.scrolled {
-  background: rgba(10, 15, 26, 0.95);
+  background: rgba(10, 22, 40, 0.98);
   box-shadow: var(--shadow-md);
 }
 
@@ -349,7 +358,7 @@ body::before {
   display: flex;
   align-items: center;
   gap: 6px;
-  color: var(--accent);
+  color: var(--accent-blue);
   text-decoration: none;
   font-size: 0.9rem;
   font-weight: 500;
@@ -358,6 +367,7 @@ body::before {
 
 .section-link:hover {
   gap: 10px;
+  color: var(--accent-blue-hover);
 }
 
 /* ===== CARD GRID ===== */
@@ -391,8 +401,8 @@ body::before {
 
 .card:hover {
   transform: translateY(-4px);
-  border-color: var(--border-hover);
-  box-shadow: var(--shadow-glow);
+  border-color: rgba(59, 130, 246, 0.4);
+  box-shadow: 0 0 30px rgba(59, 130, 246, 0.15);
 }
 
 .card-img {
@@ -492,8 +502,8 @@ body::before {
 }
 
 .match-card:hover {
-  border-color: var(--border-hover);
-  box-shadow: var(--shadow-glow);
+  border-color: rgba(59, 130, 246, 0.4);
+  box-shadow: 0 0 30px rgba(59, 130, 246, 0.15);
 }
 
 .match-header {
@@ -511,7 +521,7 @@ body::before {
   gap: 8px;
   font-size: 0.8rem;
   font-weight: 600;
-  color: var(--accent);
+  color: var(--accent-blue);
   text-transform: uppercase;
   letter-spacing: 0.5px;
 }
@@ -598,6 +608,42 @@ body::before {
   background: var(--glass-bg);
   border-radius: 16px;
   grid-column: 1 / -1;
+}
+
+/* No Matches Message (Enhanced) */
+.no-matches-message {
+  text-align: center;
+  padding: 48px 24px;
+  color: var(--text-subtle);
+  background: var(--glass-bg);
+  border-radius: 16px;
+  grid-column: 1 / -1;
+  border: 1px solid var(--glass-border);
+}
+
+.no-matches-message .no-matches-icon {
+  font-size: 3rem;
+  display: block;
+  margin-bottom: 16px;
+  opacity: 0.6;
+}
+
+.no-matches-message p {
+  font-size: 1.1rem;
+  color: var(--text-primary);
+  margin: 0 0 8px 0;
+}
+
+.no-matches-message small {
+  color: var(--text-subtle);
+  font-size: 0.9rem;
+}
+
+/* Alternate Section Background */
+.section-alt {
+  background: linear-gradient(180deg, rgba(59, 130, 246, 0.05) 0%, transparent 100%);
+  border-top: 1px solid var(--glass-border);
+  border-bottom: 1px solid var(--glass-border);
 }
 
 /* Live Match Card Highlight */
@@ -714,23 +760,24 @@ body::before {
   align-items: center;
   justify-content: center;
   gap: 8px;
-  padding: 14px 28px;
-  font-size: 0.95rem;
+  padding: 12px 24px;
+  font-size: 0.9rem;
   font-weight: 600;
   text-decoration: none;
-  border-radius: 12px;
+  border-radius: 8px;
   border: none;
   cursor: pointer;
   transition: var(--transition);
   position: relative;
   overflow: hidden;
-  background: var(--gradient-accent);
-  color: var(--primary);
+  background: var(--accent-blue);
+  color: #ffffff;
 }
 
 .btn:hover {
   transform: translateY(-2px);
-  box-shadow: var(--shadow-glow);
+  box-shadow: 0 8px 25px rgba(59, 130, 246, 0.4);
+  background: var(--accent-blue-hover);
 }
 
 .btn-full {
@@ -738,14 +785,14 @@ body::before {
 }
 
 .btn-outline {
-  background: transparent;
-  border: 1px solid var(--border);
-  color: var(--accent);
+  background: rgba(255, 255, 255, 0.05);
+  border: 1px solid rgba(255, 255, 255, 0.2);
+  color: #ffffff;
 }
 
 .btn-outline:hover {
-  background: rgba(0, 245, 160, 0.1);
-  border-color: var(--border-hover);
+  background: rgba(255, 255, 255, 0.1);
+  border-color: rgba(255, 255, 255, 0.4);
 }
 
 /* ===== LIVE BADGE ===== */
