@@ -1239,6 +1239,89 @@ body::before {
   padding: 32px 0 60px;
 }
 
+/* Guide Hero Image */
+.guide-hero {
+  margin-bottom: 32px;
+  border-radius: 16px;
+  overflow: hidden;
+  box-shadow: var(--shadow-md);
+  aspect-ratio: 21 / 9;  /* Cinematic wide banner ratio */
+  max-height: 400px;
+}
+
+.guide-hero-img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  object-position: center;
+  display: block;
+}
+
+/* Card Thumbnails */
+.sport-card.has-thumbnail {
+  padding-top: 0;
+  overflow: hidden;
+}
+
+.card-thumbnail {
+  width: calc(100% + 40px);
+  aspect-ratio: 16 / 9;  /* Standard video/image ratio */
+  object-fit: cover;
+  object-position: center;
+  margin: -20px -20px 16px -20px;
+  border-radius: 12px 12px 0 0;
+}
+
+.sport-card.has-thumbnail h3 {
+  margin-top: 0;
+}
+
+@media (max-width: 768px) {
+  .guide-hero {
+    aspect-ratio: 16 / 9;  /* Taller ratio on mobile */
+    max-height: 250px;
+  }
+  
+  .card-thumbnail {
+    aspect-ratio: 16 / 10;  /* Slightly taller on mobile */
+  }
+}
+
+/* Section Banners for Guides Index */
+.section-banner {
+  margin-bottom: 20px;
+  border-radius: 12px;
+  overflow: hidden;
+  aspect-ratio: 4 / 1;
+  max-height: 150px;
+}
+
+.section-banner-img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  object-position: center;
+  display: block;
+}
+
+@media (max-width: 768px) {
+  .section-banner {
+    aspect-ratio: 3 / 1;
+    max-height: 100px;
+  }
+}
+
+/* Guides Section Styling */
+.guides-section {
+  margin-bottom: 48px;
+}
+
+.guides-section h2 {
+  margin-bottom: 20px;
+  font-size: 1.5rem;
+  font-weight: 700;
+}
+
 .guide-article h1 {
   font-size: clamp(1.75rem, 4vw, 2.5rem);
   font-weight: 800;
